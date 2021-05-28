@@ -7,7 +7,7 @@
 
 struct cmd_results *cmd_titlebar_v_height(int argc, char **argv) {
 	struct cmd_results *error = NULL;
-	if ((error = checkarg(argc, "titlebar_v_height", EXPECTED_AT_LEAST, 1))) {
+	if ((error = checkarg(argc, "titlebar_v_height", EXPECTED_EQUAL_TO, 1))) {
 		return error;
 	}
 

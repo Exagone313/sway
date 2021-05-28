@@ -577,15 +577,15 @@ void container_update_title_textures(struct sway_container *container) {
 }
 
 void container_calculate_title_height(struct sway_container *container) {
-        int height;
-        int baseline;
 
 	if (!container->formatted_title) {
 		container->title_height = 0;
 		return;
 	}
+	int height;
+	int baseline;
 	if (config->titlebar_v_height >= 0) {
-		height   = config->titlebar_v_height;
+		height = config->titlebar_v_height;
 		baseline = round(height * 0.77);
 	} else {
 		cairo_t *cairo = cairo_create(NULL);
